@@ -27,13 +27,13 @@
 				<ul>
 					<li> <b>Motivation:</b> <a href="https://www.bostonindicators.org/reports/report-detail-pages/exclusionary-by-design">Exclusionary by Design</a> makes the case that municipalities adopt zoning in order to enforce social class elitism and racism. I would like to understand how this dynamic manifests in the provided zoning dataset. In addition to income and race, as mentioned in Exclusion by Design, I will explore how zoning varies by age and gender.</li>
 				</ul>
-				<li><b>What is the relationship between municipality population and % single family housing? Are there any outliers, and what can they teach us about implementing housing reform?</b></li>
+				<li><b>What is the relationship between municipality population and percent single family housing?</b></li>
 				<ul>
-					<li> <b>Motivation:</b> My intuition, based on visiting many big and small cities in my lifetime, is that the larger the municipality population, the smaller the % single family housing. I would like to explore this question to see how my intuition holds in practice. If this intuition holds, my next space for exploration is if there are any outlier cities (populous cities with high % of single housing or smaller cities with low % single housing). </li>
+					<li> <b>Motivation:</b> My intuition, based on visiting many big and small cities in my lifetime, is that the larger the municipality population, the smaller the percent single family housing. I would like to explore this question to see how my intuition holds in practice. If this intuition holds, the next natural area for exploration is if and why there are any outlier cities (populous cities with high % of single housing or smaller cities with low percent single housing) and what can they teach us about implementing housing reform?</li>
 				</ul>
-				<li><b></b></li>
+				<li><b>Is there a household size where single family housing is more suitable for a non-family household?</b></li>
 				<ul>
-					<li> <b>Motivation:</b></li>
+					<li> <b>Motivation:</b> In my lived experience non-family households tend to be in the 1 to 3 person range and family households tend to have more than 2 members (2 partners + children). Therefore, I am curious if in our dataset single family housing is more suitable for non-family households at certain sizes and family households at other sizes.</li>
 				</ul>
 			</ol>
 		</section>
@@ -42,66 +42,64 @@
 			<h2>Dataset Overview</h2>
 
 			<h3>Dataset Description</h3>
-			The dataset provides Municipal-level zoning and demographic data for 101 Massachusetts municipalities. Municipalities are denoted by name and id number, and for each municipality, the dataset lists the percentage of single family zoning (compared to other types of housing such as multifamily) as well as whether the municipality is listed on the MBTA communities list. 2010 Census data is used to provide gender, race, and age information at the municipality level. Additionally, this 2010 Census is used to determine information pertaining to the size households and whether households are family or nonfamily. The 2014-2018 census is used to provide data for income brackets at the household level per municipality. 
-            I begin by understanding the distribution of the dataset to better understand and assess the quality of the dataset.
+			The dataset of Metro Boston municipalities with single family zoning vs other housing zoning provides Municipal-level zoning and demographic data for 101 Massachusetts municipalities. Municipalities are denoted by name and id number, and for each municipality, the dataset lists the percentage of single-family zoning (as opposed to other types of housing such as multifamily) as well as whether the municipality is listed on the MBTA communities list. 2010 Census data is used to provide gender, race, and age information at the municipality level. The 2010 Census is also used to provide information pertaining to the size households and whether households are family or nonfamily. The 2014-2018 census is used to provide data for household level income brackets per municipality. 
+			<br><br>
+			I first seek to gain an understanding the distribution of the dataset and assess the data quality.
+			<figure>
+				<img src="./images/EDA/Population vs Households.png" alt="" style="width: 100%;" />
+				<figcaption>
+					There is a linear relationship between the population and the number of households, which makes intuitive sense. There are no unexpected outliers other than Boston, which is what I expect to see. There are no negative values which would have indicated data quality issues.
+				</figcaption>
+			</figure>
 
 			<figure>
 				<img src="./images/EDA/Municipality Population.png" alt="" style="width: 100%;" />
 				<figcaption>
-				Caption: TODO
-				</figcaption>
-			</figure>
-			
-			<figure>
-				<img src="./images/EDA/Population vs Households.png" alt="" style="width: 100%;" />
-				<figcaption>
-				Caption: TODO
+					The populations of each municipality are as expected. About 1/3 of all residents live in the 10 biggest municipalities, with Boston being the largest by a substantial amount (~5 times larger than the second largest municipality).
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/EDA/Number of Households By Income Level.png" alt="" style="width: 100%;" />
 				<figcaption>
-				Caption: TODO---rembmer to quote nielsburg study
+				I was surprised by the large number of high earning households, making me concerned there may be an income data quality issue. However, I found a <a href="https://www.neilsberg.com/insights/massachusetts-median-household-income-by-age/ ">Neilsberg study</a> detailing Massachusetts income distribution that confirms the quality of our data set.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/EDA/Gender Distribution.png" alt="" style="height: 100%;" />
 				<figcaption>
-				Caption: TODO
+					Gender is distributed relatively evenly. There are slightly more females (52% of population) than males, which does not point to a data quality issue as it is expected according to this <a href=" https://www.mass.gov/doc/hom-chapter-1pdf/download"> Massachusetts government report</a>.
 				</figcaption>
 			</figure>
 			
 			<figure>
 				<img src="./images/EDA/Population by Age.png" alt="" style="height: 100%;" />
 				<figcaption>
-				Caption: TODO - rembmer nielsburg study
+					Age is distributed as I intuitively expect, with the majority of individuals falling in the 18-64 age range. This distribution is confirmed by this is as expected <a href="https://www.neilsberg.com/insights/massachusetts-population-by-age/">Neilsberg study</a> on Massachusetts age.
 				</figcaption>
 			</figure>
 			
 			<figure>
 				<img src="./images/EDA/Population by Race.png" alt="" style="width: 100%;" />
 				<figcaption>
-				Caption: TODO
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="./images/EDA/Family vs Nonfamily Households.png" alt="" style="height: 100%;" />
-				<figcaption>
-				Caption: TODO
+					The race distribution is as I intuitively expect. This racial distribution is confirmed by this <a href=" https://www.mass.gov/doc/hom-chapter-1pdf/download"> Massachusetts government report</a>.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/EDA/MBTA Access.png" alt="" style="height: 100%;" />
 				<figcaption>
-				Caption: TODO
+					Given such few municipalities (4), were not MBTA communities, I chose to manually inspect each of the 4 to ensure no data quality issues. This manual inspection revealed that Boston is not an MBTA community. This worried me as a potential data quality issue. However, <a href="https://www.mass.gov/info-details/multi-family-zoning-requirement-for-mbta-communities"> further research</a> confirmed (to my surprise) that Boston is not an MBTA Community.
 				</figcaption>
 			</figure>
-			
-			
+
+			<figure>
+				<img src="./images/EDA/Family vs Nonfamily Households.png" alt="" style="height: 100%;" />
+				<figcaption>
+				There are more family houses than nonfamily households but a substantial amount (~50% more). I had little intuition on this so I can't speak on if this expected or unexpected. That said, nothing in this distribution points to data quality issues, and it is informative to understand the underlying distribution. 
+				</figcaption>
+			</figure>
 
 		</section>
 
@@ -111,73 +109,83 @@
 			<figure>
 				<img src="./images/Question 1/Zoning By Age.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
-				</figcaption>
-			</figure>
-
-			<figure>
-				<img src="./images/Question 1/Zoning By Gender.png" alt="" style="width: 100%;" />
-				<figcaption>
-				This is a test
+					Here we see that people under 18 years old or over 64 years older are more likely to live in single family housing than people 18-64 years old. This makes sense because under 18-year-olds typically live with their parents or guardians in single family houses. People over 64 years old, often retirees, typically prefer single family housing for privacy and comfort. Individuals aged 18-64 are young adults and working professionals that typically prioritize the convenience and affordability that multifamily housing provides.
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/Question 1/Zoning By Income.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+					As expected, the higher the income bracket, the higher probability an individual lives in a single-family home. This is presumably because single family housing costs more to obtain than multifamily. 
 				</figcaption>
 			</figure>
 
 			<figure>
 				<img src="./images/Question 1/Zoning By Race.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+					White people live in single family housing at a rate much higher than any other race. Considering that single family housing is typically more expensive then multifamily, as further evidenced in the above chart of “Zoning by Income”, and knowing that Asian’s have the <a href=" https://www.statista.com/statistics/233324/median-household-income-in-the-united-states-by-race-or-ethnic-group/"> highest average income by race </a> in America, I was surprised to see that Asian single family housing rate was not higher. 
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="./images/Question 1/Zoning By Family vs Nonfamily Households.png" alt="" style="width: 100%;" />
+				<img src="./images/Question 1/Zoning By Gender.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+					The distribution of single family living between men and women is nearly identical. Considering it is more expensive to acquire single family housing, I am not intuitively sure how to explain why the rates across gender’s are identical considering the well-documented <a href="https://www.weforum.org/agenda/2023/03/charted-the-gender-pay-gap-in-the-us-hasnt-changed-much-in-decades/#:~:text=The%20gender%20gap%20in%20pay,%2D%20and%20part%2Dtime%20workers
+					"> gender pay gap </a>.					
 				</figcaption>
 			</figure>
-
-			<figure>
-				<img src="./images/Question 1/Zoning By Household Size.png" alt="" style="width: 100%;" />
-				<figcaption>
-				This is a test
-				</figcaption>
-			</figure>
-
 		</section>
 
 		<section>
-			<h2>Question 2: What is the relationship between municipality population and % single family housing? Are there any outliers, and what can they teach us about implementing housing reform?</h2>
+			<h2>Question 2: What is the relationship between municipality population and percent single family housing?</h2>
 
 			<figure>
 				<img src="./images/Question 2/Population vs Single Family.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+					First, I naively plot population vs the percentage single family. There is no clear trend between population and the percentage single family.
 				</figcaption>
 			</figure>
 			
 			<figure>
 				<img src="./images/Question 2/Population vs Single Family (Filtered).png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+					The naïve plot includes municipalities with 0% and 100% single family housing. One of these edge municipalities is Boston, which the data claims is a municipality with 0% single family housing. However, based on my experience living in Boston and  it appears inaccurate to claim that Boston has 0% single-family housing. Therefore, I choose to drop these edge municipalities. However, even after dropping the edge municipalities, there is still no meaningful correlation between population and percentage single family (other than the pocket of low population municipalities in the top left of the chart), which is contrary to my intuition that the higher the population, the lower the percent single family housing.
+
 				</figcaption>
 			</figure>
 
 		</section>
 
 		<section>
-			<h2>Question 3: </h2>
+			<h2>Question 3: Is there a household size where single family housing is more suitable for a non-family household?</h2>
+
+			
 
 			<figure>
-				<img src="./images/test.png" alt="" style="width: 100%;" />
+				<img src="./images/Question 1/Zoning By Family vs Nonfamily Households.png" alt="" style="width: 100%;" />
 				<figcaption>
-				This is a test
+				Unsuprisingly single family housing is more suitable for family households than nonfamily households. This is because single family housing is typically larger, more privet, and more expensive than multifamily housing, which is more suitable for family households.
+				</figcaption>
+			</figure>
+		
+			<figure>
+				<img src="./images/Question 3/Zoning By Household Size (Family).png" alt="" style="width: 100%;" />
+				<figcaption>
+					I break out the family households by size to see if there is a household size where single family housing is most suitable. I find that single family housing is most suitable for households of size 4. This makes sense considering that the <a href=" https://www.statista.com/statistics/718084/average-number-of-own-children-per-family/#:~:text=The%20typical%20American%20picture%20of,18%20per%20family%20in%201960.&text=If%20there's%20one%20thing%20the,is%20known%20for%2C%20it's%20diversity."> average number of kids in a US family is 1.9 </a>, which with two guardians makes a family of 4.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/Question 3/Zoning By Household Size (Non Family).png" alt="" style="width: 100%;" />
+				<figcaption>
+					Single family housing is most popular for non family households of size 1 and 2. This makes the most sense as smaller single family houses are cheaper and more suitable to a small number of people such as one person or two (roommates) relative to a bigger house for larger families. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="./images/Question 1/Zoning By Household Size.png" alt="" style="width: 100%;" />
+				<figcaption>
+					Finally, I analyze the relative rates of single-family housing broken out by family vs nonfamily household and household size (I have removed non family size 1 households as there is no size 1 comparison within family households). As noted above, within nonfamily households, single family housing is most prevalent in smaller sizes (households of size 1 or 2). In contrast, within family households, single family housing is most prevalent for size 4 household. Despite the impact of size within nonfamily and family households, when we look across nonfamily vs family households, we see that single family households are always more popular amongst family households. Therefore, the relative popularity of single family housing at all size levels matches the overall popularity seen in Figure 15.
 				</figcaption>
 			</figure>
 
@@ -186,7 +194,7 @@
 		<section>
 			<h2>Summary</h2>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+			<p>In this report I outline the dataset and its underlying distribution. We find that it is a quite clean dataset, with the only notable data quality probable pertaining to municipalities such as Boston being listed as 0% single family housing when <a href="https://www.bostonplans.org/getattachment/3e8bfacf-27c1-4b55-adee-29c5d79f4a38"> according to real world reports</a> that is not true. I then explore the question of zonings impact on social class, race, age, and gender. Here I find tangible differences within demographics for all but gender. Next, I explore the relationship between municipality population and single-family housing, where I find no discernable correlation. Finaly, I example differences in single family prevalence by household type (family vs nonfamily) and household size. At each size, single family prevalence is far greater in family households than non-family households.</p>
 		</section>
 	</main>
 </body>
