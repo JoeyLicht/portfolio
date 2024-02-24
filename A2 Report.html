@@ -13,94 +13,174 @@
 		</h1>
 
 		<p>
-			<strong>Your Name</strong> — <em>Your MIT Email Address</em>
+			<strong>Joey Licht</strong> — <em>lichtj@mit.edu</em>
 		</p>
 	</header>
 	<main>
 		<section>
-			<h2>Subtheme: [ENTER SUBTHEME]</h2>
+			<h2>Subtheme: Exclusionary Zoning</h2>
 
 			<h3>Overall Analysis Questions</h3>
+
 			<ol>
-				<li>QUESTION_1</li>
-				<li>QUESTION_2</li>
-				<li>QUESTION_3</li>
-				<li>...</li>
+				<li><b>How does zoning differ by social class, race, age, and gender?</b></li>
+				<ul>
+					<li> <b>Motivation:</b> <a href="https://www.bostonindicators.org/reports/report-detail-pages/exclusionary-by-design">Exclusionary by Design</a> makes the case that municipalities adopt zoning in order to enforce social class elitism and racism. I would like to understand how this dynamic manifests in the provided zoning dataset. In addition to income and race, as mentioned in Exclusion by Design, I will explore how zoning varies by age and gender.</li>
+				</ul>
+				<li><b>What is the relationship between municipality population and % single family housing? Are there any outliers, and what can they teach us about implementing housing reform?</b></li>
+				<ul>
+					<li> <b>Motivation:</b> My intuition, based on visiting many big and small cities in my lifetime, is that the larger the municipality population, the smaller the % single family housing. I would like to explore this question to see how my intuition holds in practice. If this intuition holds, my next space for exploration is if there are any outlier cities (populous cities with high % of single housing or smaller cities with low % single housing). </li>
+				</ul>
+				<li><b></b></li>
+				<ul>
+					<li> <b>Motivation:</b></li>
+				</ul>
 			</ol>
 		</section>
 
 		<section>
-			<h2>Discoveries & Insights</h2>
+			<h2>Dataset Overview</h2>
+
+			<h3>Dataset Description</h3>
+			The dataset provides Municipal-level zoning and demographic data for 101 Massachusetts municipalities. Municipalities are denoted by name and id number, and for each municipality, the dataset lists the percentage of single family zoning (compared to other types of housing such as multifamily) as well as whether the municipality is listed on the MBTA communities list. 2010 Census data is used to provide gender, race, and age information at the municipality level. Additionally, this 2010 Census is used to determine information pertaining to the size households and whether households are family or nonfamily. The 2014-2018 census is used to provide data for income brackets at the household level per municipality. 
+            I begin by understanding the distribution of the dataset to better understand and assess the quality of the dataset.
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/EDA/Municipality Population.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Caption: TODO
+				</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="./images/EDA/Population vs Households.png" alt="" style="width: 100%;" />
+				<figcaption>
+				Caption: TODO
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/EDA/Number of Households By Income Level.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Caption: TODO---rembmer to quote nielsburg study
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/EDA/Gender Distribution.png" alt="" style="height: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Caption: TODO
+				</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="./images/EDA/Population by Age.png" alt="" style="height: 100%;" />
+				<figcaption>
+				Caption: TODO - rembmer nielsburg study
+				</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="./images/EDA/Population by Race.png" alt="" style="width: 100%;" />
+				<figcaption>
+				Caption: TODO
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/EDA/Family vs Nonfamily Households.png" alt="" style="height: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Caption: TODO
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/EDA/MBTA Access.png" alt="" style="height: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Caption: TODO
+				</figcaption>
+			</figure>
+			
+			
+
+		</section>
+
+		<section>
+			<h2>Question 1: How does zoning differ by social class, race, age, and gender?</h2>
+
+			<figure>
+				<img src="./images/Question 1/Zoning By Age.png" alt="" style="width: 100%;" />
+				<figcaption>
+				This is a test
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/Question 1/Zoning By Gender.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This is a test
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/Question 1/Zoning By Income.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This is a test
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/Question 1/Zoning By Race.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This is a test
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/Question 1/Zoning By Family vs Nonfamily Households.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This is a test
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="./images/Question 1/Zoning By Household Size.png" alt="" style="width: 100%;" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				This is a test
 				</figcaption>
 			</figure>
+
+		</section>
+
+		<section>
+			<h2>Question 2: What is the relationship between municipality population and % single family housing? Are there any outliers, and what can they teach us about implementing housing reform?</h2>
+
+			<figure>
+				<img src="./images/Question 2/Population vs Single Family.png" alt="" style="width: 100%;" />
+				<figcaption>
+				This is a test
+				</figcaption>
+			</figure>
+			
+			<figure>
+				<img src="./images/Question 2/Population vs Single Family (Filtered).png" alt="" style="width: 100%;" />
+				<figcaption>
+				This is a test
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Question 3: </h2>
+
+			<figure>
+				<img src="./images/test.png" alt="" style="width: 100%;" />
+				<figcaption>
+				This is a test
+				</figcaption>
+			</figure>
+
 		</section>
 
 		<section>
