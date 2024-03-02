@@ -13,7 +13,7 @@
 		</h1>
 
 		<p>
-			<strong>Your Name</strong> — <em>Your MIT Email Address</em>
+			<strong>Joey Licht</strong> — <em>lichtj@mit.edu</em>
 		</p>
 	</header>
 
@@ -21,11 +21,13 @@
 		<section>
 			<h2>Phase One: Sketching Visualizations</h2>
 
+			<h3>Question: How has the distribution of population and sex changed from 1900 to 2000 across ages?</h3>
+
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/sketch1.jpg" alt="" />
 				<figcaption>
-					BRIEF CAPTION HERE.
-				</figcaption>
+					Histogram Sketch
+						  </figcaption>
 			</figure>
 
 			<p>
@@ -33,15 +35,28 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li>What was your motivation behind generating this sketch?</li>
+				<ul>	
+					<li>I wanted a chart type that lends itself well to visualizing distributions across a data set. This is how I settled on a histogram. I had to adapt the histogram to capture distribution of total population and sex and its change over time.  I was able to capture this added complexity with color and different border types.</li>
+				</ul>
+				<li>What were you hoping it would communicate? </li>
+				<ul>	
+					<li>I was hoping to communicate how the shape of the population distribution across ages has changed from 1900 to 2000. I also wanted to communicate how the distribution of sex at each age has evolved from 1900 to 2000.</li>
+				</ul>
+				<li>What worked well and what didn’t? </li>
+				<ul>	
+					<li>This sketch does a good job capturing how the overall population distribution has evolved from 1900 to 2000. It is clear to see how much of the overall population share each age captures and how that has changed in 100 years. I also think it becomes clear to understand which bars belong to 1900 vs 2000 with simple border differences (solid vs dashed) as well as leveraging the fact that a natural way to show the flow of time is the way we read, left to right. However, this chart is limited in that it is very difficult to compare the evolution of sex distribution for females. This is because the males start on a common scale (making it easy to compare male age share), but we lose that common scale for the females due to variations in male distribution affecting the female starting point.</li>
+				</ul>
+				<li>What would you like to explore in the next sketch?</li>
+				<ul>	
+					<li>In the next sketch I want to focus on ways to better capturing this sex distribution, which is not well captured due to a lack of common scale for females in this histogram.</li>
+				</ul>
 			</ul>
 
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/sketch2.jpg" alt="" />
 				<figcaption>
-          BRIEF CAPTION HERE.
+          Sex Difference Sketch
 				</figcaption>
 			</figure>
 
@@ -50,15 +65,28 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li>What was your motivation behind generating this sketch?</li>
+				<ul>	
+					<li>This sketch attempts address sketch 1’s drawback of not effectively communicating the change in sex over time. I address this drawback by explicitly charting the difference in % Female and % Male for each age group in 1900 vs 2000. </li>
+				</ul>
+				<li>What were you hoping it would communicate? </li>
+				<ul>	
+					<li>The primary goal was to communicate how the difference in sex for each age group has evolved from 1900 to 2000. I also wanted to capture the % of the population in each age group using size (the height) of each bar.</li>
+				</ul>
+				<li>What worked well and what didn’t? </li>
+				<ul>	
+					<li>This chart does a good job communicating the differences in sex over time at each age group. It is clear to see how for each age group the difference in % females and % males have evolved over time. However, this chart has a lot of problems. Namely, the distribution of the data is not well captured at all and the use of size/height to indicate percent of population is not clear or easy to digest.</li>
+				</ul>
+				<li>What would you like to explore in the next sketch?</li>
+				<ul>	
+					<li>I want to explore a sketch that uses the size in a clearer manner and uses the coloration (as in sketch 1) while also clearly indicating which years (1900 vs 2000) data belongs to.</li>
+				</ul>
 			</ul>
 
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/sketch3.jpg" alt="" />
 				<figcaption>
-          BRIEF CAPTION HERE.
+          Pie Chart Sketch
 				</figcaption>
 			</figure>
 
@@ -67,15 +95,24 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li>What was your motivation behind generating this sketch?</li>
+				<ul>	
+					<li>This sketch is my attempt to leverages shape and color to clearly to capture the distribution of data in terms of total people and by sex.</li>
+				</ul>
+				<li>What were you hoping it would communicate? </li>
+				<ul>	
+					<li>I was hoping to communicate changes in population and sex distribution across time and across ages. If you look on a single column, I want you to easily see how population (size) and sex (color) changes across ages. If you look horizontally, I want you to be able to make these comparisons by year (1900 vs 2000)</li>
+				</ul>
+				<li>What worked well and what didn’t? </li>
+				<ul>	
+					<li>I think the layout makes comparisons of both population and sex across ages and years easily digestible. A drawback of this design is that it is not as easy to gather explicit quantitative values like we see in a more traditional chart such as a histogram (sketch 1). </li>
+				</ul>
 			</ul>
 
       <h3>Reflection</h3>
 
       <p>
-        WRITE REFLECTION ON ALL 3 SKETCHES HERE.
+        The first sketch does a good job capturing precise quantitative information and overall population distribution, as expected for a histogram. That said, it is difficult to also encode time (1900 vs 2000) and sex data into this histogram, making comparisons of sex distribution particularly difficult due to a lack of common starting scale (for the females). The second sketch improves on this draw back in that it very clearly quantifies the differences in sex at each age range. However, in this second chart we lose a quality understanding of data distribution because encoding the population data in the height/size of the bars is very difficult to digest. The third sketch does a good job to simply encode distribution data using size and color. It allows for clean comparisons across year and age. That said, sketch 3 is limited in its lack of clear quantitative information. For the next stage I want to try to bring sketch 3 to life using Tableau. I am more interested in changes over time than preserving perfect quantitative communication. Sketch 3 captures changes over time very neatly.
       </p>
 
 		</section>
@@ -84,9 +121,9 @@
 			<h2>Phase Two: Final Design</h2>
 
 			<figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/How has the aging of males and females evolved from 1900 to 2000.png" alt="" />
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				Pie Chart Final Design
 				</figcaption>
 			</figure>
 		</section>
@@ -95,14 +132,18 @@
 			<h2>Design Process & Design Decisions</h2>
 
 			<p>
-        DESCRIBE YOUR DESIGN PROCESS AND DECISION DECISIONS HERE.
-      </p>
+				My visualization aims to capture the story of how the 2000 population is living longer than their 1900 counterparts. The size of the circle represents the percent of the total population. From this we see that a much larger percent of the 2000 population is living well into their 70s, 80s, and 90s relative to 1900. Importantly, I also aim to capture the nuance that while both genders are living longer in general, the female increase in lifespan has been far more drastic than male’s. Using coloration to show the sex split, we notice how people in both 1900 and 2000 start out as babies (age 0) in a roughly even sex split. In 1900, from 0 to 75 years old, the population remains split roughly even (with a slight male advantage), until females begin to make up the slight majority of 80 through 90-year-olds. In stark contrast for 2000, we see that at each 5-year jump in age females are outliving their male counterparts, reaching a 3 to 1 majority by the time they reach 90. In summary, this graphic answers our motivating question by showing that both females and males have experienced an increase in lifespan in 2000 relative to 1900, with females experiencing a far bigger improvement in lifespan.
+				
+				<br>
+				<br>
+				For mark type, I used colored pie charts to capture the split between male and females for each pair of year (1900 or 200) and age (increments of 5 from 0 to 90). I color the females pink and males blue as these are culturally significant colors that the audience should be able to easily assign to the respective sex, thus easing the cognitive load on the audience. The size of the pie chart captures the percent of population. More concretely, the size of pie chart at year Y with age A represents the percent of people that lived in year Y that are age A. For the pie chart scale, I began with Tableau’s default ‘Automatic’ scale, and then increase the size of the smallest mark until it is visible. I scaled this way because I wanted to keep the pie chart size as close to true scale as possible while also ensuring that all pies are visible (which was not the case for the 90-year-olds in 1900 using the original true-to-size scale).  I would have loved to have collected empirical data to scale the pie chart sizes so that they obey Steven’s Power Law. I chose to format the years on the x axis increasing left to right and the age on the y-axis increasing top to bottom so that the orientation captures the flow of time according to the viewer’s natural reading progression (left to right, top to bottom). Another benefit of this layout is that the pie charts have a coloring position on a common scale (12 o’clock) that allows the viewer to easily see the changing sex distribution across different ages. The main limitation of this visualization is the lack of easily digestible quantitative information. A simple bar chart/histogram would allow for more precise quantitative encoding of the data. However, I accept this tradeoff as I believe the sizing and coloring of this design cleanly and effectively answer the motivating question pertaining to the change in aging from 1900 to 2000. The exact quantities are less important than the distribution which is cleanly captured with size and color.
+			</p>
 
 
       <h3>Reflection</h3>
 
       <p>
-        WRITE YOUR FINAL REFLECTION HERE.
+        Phase one was extremely helpful for ultimately arriving at my question used in phase two. Notice how the question that motivated phase one was “How has the distribution of population and sex changed from 1900 to 2000 across ages?” whereas the question I settle on for phase two was “How has the aging of males and females evolved from 1900 to 2000?”. The phase one question was the natural question for me to ask after looking at summary chart with rounded numbers in the 6.C85 website assignment dataset description. However, after going through the exercise of 3 sketches, I realized a far more interesting question to ask is that of “aging”, and how it has evolved at a population and sex level. Phase one was also very helpful to identify the importance of visual comparisons using size and color vs quantitative encoding using more traditional charts such as a histogram. During the sketching exercise, I realized that a better, simpler, and more effective way to answer the aging question is using size and color as I have in the final design.
       </p>
 		</section>
 	</main>
