@@ -18,15 +18,15 @@
 	</header>
 
 	<main>
-    <h2>Proposition: [STATE PROPOSITION]</h2>
+    <h2>Proposition: Pro-Choice states are undermining Pro-Life states’ rights by building out excess abortion clinic capacity to subsidize nonresidents.</h2>
 
 		<section>
       <h3>FOR the Proposition</h3>
 
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/Anti-Abortion (Final).png" alt="" style="width: 100%;" />
 				<figcaption>
-					BRIEF CAPTION HERE.
+					Pro-Choice States' Excess Abortion Capacity Supports Nonresidents (Larger Circle = More Abortion Clinics, Brighter Red = More Nonresident Abortions)
 				</figcaption>
 			</figure>
 
@@ -35,19 +35,21 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li><b>Two-Tone Color Gradient (-2):</b> The brighter the red, the more abortions provided by the state to nonresidents in 2020. This color coding makes the design persuasive considering it very clearly highlights the states with high numbers of nonresident abortions, satisfying one of the main objectives of the visualization. However, to make this design persuasive through this color coding, I had to deceptively use a two-tone color gradient with the cutoff between light and dark red specifically chosen (900 nonresident abortions) to visually support the proposition. This decision came at the expense of intellectual honesty which would have been satisfied with a more granular color gradient. I ultimately elected to not use the more granular color gradient considering how the two-tone gradient did a better job supporting the proposition. </li>
+				<li><b>Not-to-Scale Marker Sizing (-2):</b> Marker size is used to convey the number of abortion clinics per state in 2020. I strategically make the size of states with high number of abortion clinics disproportionately larger than states with less clinics. This is persuasive because it focusses the reader’s attention on states with high numbers of abortion clinics while making the states with smaller number of clinics feel as an afterthought. While effective, this deceptive trick can lose the reader’s trust should they catch the deception. I considered using a more true to size scale, however I felt I could subtly adjust the proportions without losing the reader’s trust.</li>
+				<li><b>Red Marker (-1):</b> The decision to use red makes the visualization persuasive as a direct play on the reader’s pathos, pulling on the thread that abortions are considered by many to be bloody/murderous. Red is also a great color for capturing attention, naturally drawing the reader’s eyes to the states of interest. That said, I think this choice can make the reader more skeptical of the visualization compared to a more neutral color scheme such as a grayscale. While I considered using a neutral color scheme, I ultimately elected to play to the audience’s pathos as a tool to support the proposition.</li>
+				<li><b>"Nonresident Abortions" Calculated Field (2):</b> I calculate this field by first using the existing fields “No. of abortions, by state of residence, 2020” and “% of residents obtaining abortions who traveled out of state for care, 2020” to determine the number of residents who obtained an abortion in their home state. Then I use “No. of abortions, by state of occurrence, 2020” to back into the number of abortions in a particular state that were provided for nonresidents. This calculated field is crucial for understanding the proposition. However, this field to use this field in favor of the proposition, I had to employ a deceptive two-tone color gradient (explained above). I considered calculating and using “Nonresident abortions per abortion clinic” rather than just the number of abortions. However, I chose not to utilize this field considering it doesn’t best answer the proposition, which is more concerned with the total number of abortions rather than the impact of each individual clinic.</li>
 			</ul>
+
     </section>
 
     <section>
       <h3>AGAINST the Proposition</h3>
 
       <figure>
-				<img src="IMAGE_FILENAME" alt="" />
+				<img src="images/Pro Abortion (Actual Final).png" alt="" style="width: 100%;" />
 				<figcaption>
-          BRIEF CAPTION HERE.
+				Reducing Abortion Clinics Allow States to Focus on Providing Nonresident Abortion Support
 				</figcaption>
 			</figure>
 
@@ -56,16 +58,21 @@
 			</p>
 
 			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
+				<li><b>Filtering For Only States That Decreased Abortion Clinics From 2017-2020 (-2):</b> When I included all states, regardless of whether abortion clinics increased, decreased, or stayed the same, then there was no noticeable trend or correlation relative to the percentage of nonresident abortions. By filtering for only states that decreased abortion clinics, a trend emerged that clearly argued against the proposition. This design decision works well to persuade against the proposition, as it implies that the states which are most supportive of nonresidential abortions are the states that cut abortion funding rather than provide increased funding. This filtering is blatantly deceptive, and risks losing the reader should they realize they are only being shown a filtered subset of the data. I considered not using any filtering, because the plot would have shown no correlation between percent change in abortion clinics and percent abortions for nonresidents, which also would serve as an argument against the proposition. However, I found this filtered plot to be a much stronger argument.</li>
+				<li><b>“% Decrease” rather than “% Change” as x-axis (-0.5):</b> The design choice to use “% Decrease” (“% Change” times negative one) is persuasive because it leverages the fact that it is easier to interpret positive values than negative values in order to argue that as funding cuts rise (higher % Decrease), so does the focus on nonresident abortions, which is contrary to the proposition. However, given it is unusual to use “% Decrease” rather than “% Change”, this tactic could be interpreted as slightly deceptive.</li>
+				<li><b>"% Abortions for Nonresidents, 2020" Calculated Field (1):</b> Given the provided data, I was able to calculate the metric “% Abortions For Nonresidents, 2020” to measure a state’s attention on funding nonresident abortions. However, this is slightly misleading in that it doesn’t track a change over time (2017-2020) like the x axis does. As a result, the reader has no base of understanding as to how nonresident abortions have changed since 2017. I investigated tracking the change in nonresidential abortion over time, but realized it was not feasible with the provided dataset. </li>
+				<li><b>Dashed Trend Line (2):</b> The dashed trendline is a simple and effective way to convey to the reader the main argument of plot: decreases in abortion funding increase nonresidential abortion attention. A drawback of the trendline is that it may upset a reader that prefers to make their own conclusions rather than having the author frame the way the reader should view the raw scatterplot points. To address this concern, I make the trendline a light dashed line so that it doesn’t overly distract from the raw scatterplot points.</li>
 			</ul>
     </section>
 
     <section>
       <h2>Final Reflection</h2>
 
-      <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+      <p>This was one of the more interesting/enjoyable assignments I have completed while at MIT considering all my previous work trained the skill of effectively discovering and communicating only one opinion/side of an argument. At the beginning of this assignment in the data familiarization and proposition generation phase, I found it challenging to study the dataset for the sake of finding interesting/controversial debates, rather than finding a “correct” answer. I wanted to challenge myself by devising a calculated field to capture something that wasn’t immediately obvious in the provided dataset, which is how I landed on this question of how excess capacity to supports nonresident abortions. Once I used this question to define a proposition, it was quite surprising to observe how differently I digested the single dataset when analyzing it from the “For” vs “Against” side. When I accepted my position as “For” or “Against” the proposition, it became straightforward to build a visualization by cherry picking fields that supported my side and embellishing the argument with design decisions such as coloration and sizing.
+		<br><br>
+		I now define ethical visualization as one that is created only AFTER going through the process of arguing both sides. This is because it allows the author to recognize implicit biases, which is important for an author that values intellectual honesty. I also believe that ethical visualization requires the author to log all major data and design decisions. This reduces the probability that a reader isn’t aware of author biases and allows the reader to “price-in” author biases to arrive closer to ground truth and objectivity. The documentation for design decisions should be simple and digestible, with an understanding that the reader is less familiar with the dataset and likely less technical than the author. If a choice that the author intentionally made is honestly and clearly documented for the reader, then I would distinguish it as “acceptable”. Choices meant to play on a reader’s subconscious more than likely belong in the “misleading category”. One final important ethical takeaway from this exercise pertains to recognizing the limitations of datasets. There were many interesting ways I could think to argue for or against the proposition that were not possible with the given dataset. I think it is important to define these limitations for the reader as they help establish the limitations of the analysis, as well as interesting areas for future exploration. 
+
+	  </p>
     </section>
 	</main>
 </body>
